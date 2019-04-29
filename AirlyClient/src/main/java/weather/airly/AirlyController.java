@@ -4,18 +4,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import weather.airly.model.Measurement;
-import weather.airly.service.MeasurementService;
+import weather.airly.model.AirlyMeasurement;
+import weather.airly.service.CurrentMeasurementService;
 
 @RestController
 @RequestMapping("/weather/airly")
 public class AirlyController {
 
     @Autowired
-    private MeasurementService service;
+    private CurrentMeasurementService service;
 
     @GetMapping("example")
-    public Measurement get() {
+    public AirlyMeasurement get() {
         return service.getCurrentMeasurement();
     }
 

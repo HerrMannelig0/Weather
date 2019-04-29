@@ -1,6 +1,6 @@
 package weather.airly.model;
 
-public class Measurement {
+public class AirlyMeasurement {
 
     private Current current;
 
