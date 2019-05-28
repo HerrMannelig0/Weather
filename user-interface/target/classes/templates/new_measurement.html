@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>New Measurement</title>
+</head>
+<body>
+
+<h4 style="color:blue">MEASUREMENT</h4>
+
+<form action="#" th:action="@{/measurement/save}" th:object="${measurement}" method="post">
+    <label for="date">Date</label>
+    <input type="text" th:field="*{date}" id="date" placeholder="Date">
+
+    <label for="pm10">PM 10</label>
+    <input type="text" th:field="*{pm10}" id="pm10" placeholder="PM10">
+
+    <label for="pm10">Description</label>
+    <input type="text" th:field="*{description}" id="description" placeholder="Description">
+
+    <input type="submit" value="Save">
+</form>
+
+</body>
+</html>

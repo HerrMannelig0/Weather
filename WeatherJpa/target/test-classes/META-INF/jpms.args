@@ -1,0 +1,4 @@
+--patch-module
+weather.jpa=_
+--add-reads
+weather.jpa=ALL-UNNAMED

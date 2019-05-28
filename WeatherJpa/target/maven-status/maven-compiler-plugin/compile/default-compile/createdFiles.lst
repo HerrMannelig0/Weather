@@ -1,0 +1,6 @@
+weather\db_communication\measurement\MeasurementRepository.class
+weather\db_communication\measurement\DbController.class
+weather\db_communication\measurement\Measurement.class
+module-info.class
+weather\db_communication\measurement\MeasurementService.class
+weather\db_communication\measurement\MeasurementServiceImpl.class

@@ -4,9 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import weather.airly.model.Current;
 import weather.airly.model.Values;
 import weather.airly.service.CurrentMeasurementService;
@@ -70,6 +68,18 @@ public class MeasurementController {
         measurementService.add(measurement);
         model.addAttribute("measurements", measurementService.getAll());
         return "all_measurements";
+    }
+
+    @GetMapping("/last")
+    public @ResponseBody Measurement getLast() {
+        final var lastMeasurement = measurementService.getLast();
+        return lastMeasurement.orElse(new Measurement());
+    }
+
+    @GetMapping("/one")
+    public @ResponseBody Measurement getById(@RequestParam("id") long id) {
+        final var measurement = measurementService.getById(id);
+        return measurement.orElse(new Measurement());
     }
 
     private String getDescriptionFromCurrentMeasurement(Current current) throws InvalidMeasurementException {

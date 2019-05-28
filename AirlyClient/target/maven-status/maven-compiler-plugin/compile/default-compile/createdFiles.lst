@@ -1,0 +1,10 @@
+weather\airly\model\Current.class
+weather\airly\service\CurrentMeasurementService.class
+weather\airly\model\Standards.class
+module-info.class
+weather\airly\model\AirlyMeasurement.class
+weather\airly\AirlyController.class
+weather\airly\model\Indexes.class
+weather\airly\service\CurrentCurrentMeasurementServiceImpl.class
+weather\airly\model\Values.class
+weather\airly\service\AirlyConfigs.class
