@@ -14,9 +14,4 @@ public class AirlyController {
     @Autowired
     private CurrentMeasurementService service;
 
-    @GetMapping("example")
-    public AirlyMeasurement get() {
-        return service.getCurrentMeasurement();
-    }
-
 }
